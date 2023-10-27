@@ -1,0 +1,13 @@
+CREATE DATABASE board;
+USE board;
+CREATE TABLE messages (
+	id INT NOT NULL AUTO_INCREMENT,
+    message VARCHAR(255) NOT NULL,
+    image_id VARCHAR(255) default NULL,
+    time datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+SELECT CONVERT_TZ(CURRENT_TIMESTAMP, 'UTC', 'Asia/Taipei');
+SELECT * FROM messages;
+DROP TABLE messages;
